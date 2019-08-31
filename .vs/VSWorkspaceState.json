@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Resume",
+    "\\Resume\\Resume",
+    "\\Resume\\Resume\\Pages"
   ],
+  "SelectedNode": "\\Resume\\Resume\\Pages\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

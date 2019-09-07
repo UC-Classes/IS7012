@@ -30,3 +30,4 @@ C:\Users\Administrator\source\repos\UC-Classes\IS7012\CoreWiki\CoreWiki\obj\Debu
 C:\Users\Administrator\source\repos\UC-Classes\IS7012\CoreWiki\CoreWiki\obj\Debug\netcoreapp2.2\CoreWiki.csproj.CopyComplete
 C:\Users\Administrator\source\repos\UC-Classes\IS7012\CoreWiki\CoreWiki\obj\Debug\netcoreapp2.2\Razor\Pages\Bohr_radius.g.cshtml.cs
 C:\Users\Administrator\source\repos\UC-Classes\IS7012\CoreWiki\CoreWiki\obj\Debug\netcoreapp2.2\Razor\Pages\Planck_constant.g.cshtml.cs
+C:\Users\Administrator\source\repos\UC-Classes\IS7012\CoreWiki\CoreWiki\obj\Debug\netcoreapp2.2\Razor\Pages\Measurement_in_quantum_mechanics.g.cshtml.cs

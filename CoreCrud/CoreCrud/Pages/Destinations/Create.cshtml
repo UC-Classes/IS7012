@@ -1,0 +1,63 @@
+﻿@page
+@model CoreCrud.Pages.Destinations.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Destination</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Destination.TripName" class="control-label"></label>
+                <input asp-for="Destination.TripName" class="form-control" />
+                <span asp-validation-for="Destination.TripName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destination.LeaveDate" class="control-label"></label>
+                <input asp-for="Destination.LeaveDate" class="form-control" />
+                <span asp-validation-for="Destination.LeaveDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destination.ReturnDate" class="control-label"></label>
+                <input asp-for="Destination.ReturnDate" class="form-control" />
+                <span asp-validation-for="Destination.ReturnDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destination.NationalParks" class="control-label"></label>
+                <input asp-for="Destination.NationalParks" class="form-control" />
+                <span asp-validation-for="Destination.NationalParks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destination.DiveSites" class="control-label"></label>
+                <input asp-for="Destination.DiveSites" class="form-control" />
+                <span asp-validation-for="Destination.DiveSites" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destination.Budget" class="control-label"></label>
+                <input asp-for="Destination.Budget" class="form-control" />
+                <span asp-validation-for="Destination.Budget" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destination.LocationID" class="control-label"></label>
+                <select asp-for="Destination.LocationID" class ="form-control" asp-items="ViewBag.LocationID"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,58 @@
+﻿@page
+@model CoreCrud.Pages.QuickGlanceModel
+@{
+    ViewData["Title"] = "QuickGlance";
+}
+
+    <h1>Destinations - Quick Glance</h1>
+
+
+
+<ol>
+
+</ol>
+
+<div class="row">
+    <div class="col-lg-auto">
+        <table class="table table-bordered table-striped">
+            <tbody>
+                <tr>
+                    <th>Destination</th>
+                    <th>Country</th>
+                    <th>Leave Date</th>
+                    <th>Return Date</th>
+                    <th>Parks</th>
+                    <th>Dive Sites</th>
+                    <th>Budget</th>
+                </tr>
+                    @foreach (var destination in Model.Destinations)
+                    {
+            <tr>
+                <td>@destination.TripName</td>
+                <td>@destination.LocationID</td>
+                <td>@destination.LeaveDate</td>
+                <td>@destination.ReturnDate</td>
+                @if (destination.NationalParks == null)
+                {
+                    <td class="Badge badge-danger">No</td>
+                }
+                else if (destination.NationalParks != null)
+                {
+                    <td class="Badge badge-success">Yes</td>
+                }
+                @if (destination.DiveSites == null)
+                {
+                    <td class="Badge badge-danger">No</td>
+                }
+                else if (destination.DiveSites != null)
+                {
+                    <td class="Badge badge-success">Yes</td>
+                }
+                <td>@destination.Budget</td>
+
+            </tr>
+                    }
+            </tbody>
+        </table>
+    </div>
+</div>

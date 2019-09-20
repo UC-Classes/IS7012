@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoreCrud.Migrations
 {
     [DbContext(typeof(CoreCrudContext))]
-    [Migration("20190913195159_DomainModel3")]
-    partial class DomainModel3
+    [Migration("20190920131355_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,13 +27,9 @@ namespace CoreCrud.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CountryID");
-
                     b.Property<string>("CountryName");
 
                     b.HasKey("ID");
-
-                    b.HasIndex("CountryID");
 
                     b.ToTable("Country");
                 });
@@ -65,17 +61,10 @@ namespace CoreCrud.Migrations
                     b.ToTable("Destination");
                 });
 
-            modelBuilder.Entity("CoreCrud.Models.Country", b =>
-                {
-                    b.HasOne("CoreCrud.Models.Country")
-                        .WithMany("Countries")
-                        .HasForeignKey("CountryID");
-                });
-
             modelBuilder.Entity("CoreCrud.Models.Destination", b =>
                 {
                     b.HasOne("CoreCrud.Models.Country", "Location")
-                        .WithMany()
+                        .WithMany("destinations")
                         .HasForeignKey("LocationID")
                         .OnDelete(DeleteBehavior.Cascade);
                 });

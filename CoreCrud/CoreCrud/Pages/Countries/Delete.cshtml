@@ -5,7 +5,8 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
+<img src="https://www.centcom.mil/Portals/6/Official_CENTCOM_Seal.png?ver=2016-07-26-155712-367" alt="CENTCOM" width="100" height="100" />
+<h1 class="display-4">Delete a CENTCOM Country</h1>
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
@@ -19,7 +20,7 @@
             @Html.DisplayFor(model => model.Country.CountryName)
         </dd>
     </dl>
-    
+
     <form method="post">
         <input type="hidden" asp-for="Country.ID" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |

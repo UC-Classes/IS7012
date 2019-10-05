@@ -25,7 +25,7 @@ namespace CoreCrud.Pages
             }
 
             Country = _context.Countries
-                                .Include(x => x.CountryName)
+                                //.Include(x => x.CountryName)
                                 .FirstOrDefault(cty => cty.ID == id);
             return Page();
         }
